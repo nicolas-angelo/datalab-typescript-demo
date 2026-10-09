@@ -15,13 +15,7 @@ Install it from the published GitHub repository with the
 [skills.sh CLI](https://www.skills.sh/docs/cli):
 
 ```bash
-bunx --bun skills add nicolas-angelo/datalab-typescript-demo --skill datalab-typescript-sdk
-```
-
-From a local checkout, install it directly instead:
-
-```bash
-bunx --bun skills add ./skills
+bunx --bun skills add datalab-to/typescript --skill datalab-sdk-ts
 ```
 
 The skill includes these references and loads them only when relevant:
@@ -32,14 +26,10 @@ The skill includes these references and loads them only when relevant:
   conversion, extraction, checkpoints, polling, cancellation, and errors.
 - [Pipelines](skills/references/pipelines.md): creating, publishing, updating,
   and running document pipelines.
-- [Datalab documentation](https://documentation.datalab.to/): official API and
-  product documentation.
-- [Python SDK](https://github.com/datalab-to/sdk): reference implementation used
-  for parity tracking.
 
 ## Quick Start
 
-Install the SDK and Zod:
+Install the SDK:
 
 ```bash
 bun add @datalab/sdk
@@ -51,7 +41,7 @@ Set a server-side API key:
 export DATALAB_API_KEY=your-api-key
 ```
 
-Create a client and convert a document:
+Create a Datalab client instance and convert a document:
 
 ```ts
 import { DatalabClient } from '@datalab/sdk'
