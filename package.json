@@ -1,0 +1,27 @@
+{
+  "name": "@datalab/sdk",
+  "version": "0.1.1",
+  "type": "module",
+  "packageManager": "bun@1.4.2",
+  "scripts": {
+    "demo:pipeline": "bun src/examples/pipeline-demo.ts",
+    "dev": "bun run src/examples/demo.ts",
+    "test": "bun run test:unit",
+    "test:unit": "bun test tests/unit --check --no-orphans",
+    "test:integration": "bun test tests/integration --check --no-orphans --timeout 120000",
+    "format": "biome format --write .",
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.13",
+    "@types/bun": "^1.4.2",
+    "@types/mime-types": "^3.0.1",
+    "@types/node": "^26",
+    "mime-types": "^3.0.2",
+    "typescript": "^7"
+  }
+}
